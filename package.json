@@ -1,0 +1,27 @@
+{
+  "name": "whisper-chat-socket",
+  "version": "1.0.0",
+  "description": "socket service to whisper-chat",
+  "main": "index.js",
+  "repository": "https://github.com/ViniciusdSC/whisper-chat-socket",
+  "author": "Vinicius Cardoso",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-root-import": "^6.5.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.4"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "socket.io": "^2.3.0"
+  },
+  "scripts": {
+    "dev": "nodemon -w src --exec \"node -r dotenv/config -r babel-register src --presets env\"",
+    "build": "rm -rf dist && babel ./src --out-dir ./dist --source-maps --copy-files",
+    "start": "node -r dotenv/config dist"
+  }
+}
