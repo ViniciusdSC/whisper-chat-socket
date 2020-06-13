@@ -13,6 +13,8 @@ io.on('connection', function (client) {
     const {sendMessage} = api(token);
     console.log(`New user: ${user_id} with token:${token} in ${whisper_room_id}`);
 
+    client.emit('message', 'Initial message');
+
     client.join(whisper_room_id);
 
     client.on('message', function (message) {
