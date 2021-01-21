@@ -17,7 +17,7 @@
     "axios": "^0.19.2",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "socket.io": "^2.3.0"
+    "socket.io": "^2.4.0"
   },
   "scripts": {
     "dev": "nodemon -w src --exec \"node -r dotenv/config -r babel-register src --presets env\"",
